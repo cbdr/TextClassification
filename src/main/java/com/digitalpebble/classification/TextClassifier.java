@@ -147,8 +147,8 @@ public abstract class TextClassifier {
 	 * each label
 	 **/
 	public String getBestLabel(double[] scores) {
-		int best = 0;
-		double bestScore = 0d;
+		int best = -1;
+		double bestScore = -Double.MAX_VALUE;
 		for (int d = 0; d < scores.length; d++) {
 			if (scores[d] > bestScore) {
 				bestScore = scores[d];
